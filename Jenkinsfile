@@ -26,7 +26,7 @@ pipeline {
         withSonarQubeEnv('sonarqube') {
           sh '''
             cd node-app
-            npx SonarScanner \
+            npx sonar-scanner \
               -Dsonar.projectKey=node-express-app \
               -Dsonar.projectName="Node Express App" \
               -Dsonar.sources=. \
